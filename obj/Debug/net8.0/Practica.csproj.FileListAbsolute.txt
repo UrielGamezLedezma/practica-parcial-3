@@ -28,3 +28,11 @@ C:\Users\PC\OneDrive\Documentos\Practica\obj\Debug\net8.0\refint\Practica.dll
 C:\Users\PC\OneDrive\Documentos\Practica\obj\Debug\net8.0\Practica.pdb
 C:\Users\PC\OneDrive\Documentos\Practica\obj\Debug\net8.0\Practica.genruntimeconfig.cache
 C:\Users\PC\OneDrive\Documentos\Practica\obj\Debug\net8.0\ref\Practica.dll
+C:\Users\PC\OneDrive\Documentos\Practica\bin\Debug\net8.0\DnsClient.dll
+C:\Users\PC\OneDrive\Documentos\Practica\bin\Debug\net8.0\MongoDB.Bson.dll
+C:\Users\PC\OneDrive\Documentos\Practica\bin\Debug\net8.0\MongoDB.Driver.dll
+C:\Users\PC\OneDrive\Documentos\Practica\bin\Debug\net8.0\SharpCompress.dll
+C:\Users\PC\OneDrive\Documentos\Practica\bin\Debug\net8.0\Snappier.dll
+C:\Users\PC\OneDrive\Documentos\Practica\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\PC\OneDrive\Documentos\Practica\obj\Debug\net8.0\Practica.csproj.AssemblyReference.cache
+C:\Users\PC\OneDrive\Documentos\Practica\obj\Debug\net8.0\Practica.csproj.Up2Date
