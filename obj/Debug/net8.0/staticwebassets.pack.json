@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\PC\\OneDrive\\Documentos\\Practica\\wwwroot\\js\\bundle.js",
+      "PackagePath": "staticwebassets\\js\\bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\OneDrive\\Documentos\\Practica\\wwwroot\\js\\bundle.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\js\\bundle.js.LICENSE.txt"
+    },
+    {
       "Id": "C:\\Users\\PC\\OneDrive\\Documentos\\Practica\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

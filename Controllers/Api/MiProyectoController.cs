@@ -24,7 +24,8 @@ using MongoDB.Driver;
         var db = client.GetDatabase("Escuela_evelyn_uriel");
         var collection = db.GetCollection<Equipo>("Equipo");
         
-        var lista = collection.Find(FilterDefinition<Equipo>.Empty).ToList();
-        return Ok(lista);
+        var item = collection.Find(FilterDefinition<Equipo>.Empty).FirstOrDefault();
+
+        return Ok(item);
     }
  }

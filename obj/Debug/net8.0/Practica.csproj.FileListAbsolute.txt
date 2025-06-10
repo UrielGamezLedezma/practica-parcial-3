@@ -36,3 +36,7 @@ C:\Users\PC\OneDrive\Documentos\Practica\bin\Debug\net8.0\Snappier.dll
 C:\Users\PC\OneDrive\Documentos\Practica\bin\Debug\net8.0\ZstdSharp.dll
 C:\Users\PC\OneDrive\Documentos\Practica\obj\Debug\net8.0\Practica.csproj.AssemblyReference.cache
 C:\Users\PC\OneDrive\Documentos\Practica\obj\Debug\net8.0\Practica.csproj.Up2Date
+C:\Users\PC\OneDrive\Documentos\Practica\bin\Debug\net8.0\package-lock.json
+C:\Users\PC\OneDrive\Documentos\Practica\obj\Debug\net8.0\Practica.sourcelink.json
+C:\Users\PC\OneDrive\Documentos\Practica\bin\Debug\net8.0\package.json
+C:\Users\PC\OneDrive\Documentos\Practica\bin\Debug\net8.0\tsconfig.json
