@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 [Route("usuarios")]
 public class UsuariosController : Controller
 {
-public IActionResul index()
+public IActionResult index()
 {
-  return Views();
+  return View();
 }
 }

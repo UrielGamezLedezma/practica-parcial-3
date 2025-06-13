@@ -21,10 +21,16 @@ public class ApiUsuariosController : ControllerBase
     this.collection = db.GetCollection<Usuario>("Usuarios");
   }
  [HttpGet]
- public IActionResul t ListarUsuarios()
+ public IActionResult ListarUsuarios(string? texto)
   {
     var filter = FilterDefinition<Usuario>.Empty;
+    if(!string.IsNullOrWhiteSpace(texto))
+    {
+        filter = Builders<Usuario>.Filter.Eq(u => u.Nombre, texto);
+    }
+
     var list = this.collection.Find(filter).ToList();
+
     return Ok(list);   
   }
 }
