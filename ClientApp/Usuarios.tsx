@@ -11,9 +11,15 @@ type Usuarios =
 const Usuarios = () => {
     // Datos
     const [registros, setRegistros] = useState<Usuarios[]>([]);
+    const [texto, setTexto] = useState("");
 
     const listarRegristros = async () => {
-        const resp = await fetch("/api/usuarios");
+        let url = "/api/usuarios";
+          
+        if(texto){
+            url += "?texto=" + texto;
+        }
+        const resp = await fetch(url);
         if(resp.ok){
             const datos = await resp.json();
             setRegistros(datos);
@@ -23,6 +29,27 @@ const Usuarios = () => {
     useEffect(()=>{
         listarRegristros();
     }, []);     
+    const buscar = () => {
+        listarRegristros();
+    }
+    const eliminar = async (item: Usuarios) => {
+        if(!confirm("¿Desea eliminar el usuario " + item.Nombre + "?")){
+            return;
+        }
+        
+        const resp = await fetch("/api/usuarios" + item.Id, {
+            method: "DELETE"
+        });
+        if (resp.ok){
+            listarRegristros();
+
+        }
+        else {
+            const error = await resp.text();
+            console.log(error); 
+            alert("Ocurrio un error al eliminar el registro");
+        }
+    }
 
     // Vista
     return (
@@ -38,11 +65,13 @@ const Usuarios = () => {
                         <div className="col-12">
                             <div className="mb-3">
                                 <label>Busqueda de Usuarios</label>
-                                <input type="text" className="form-control" placeholder="Introduce el nombre o el correo"/>
+                                <input type="text" className="form-control" 
+                                placeholder="Introduce el nombre o el correo"
+                                onChange={(e) => setTexto(e.target.value)}/>
                             </div>
                         </div>
                         <div className="col-12">
-                            <button className="btn btn-primary">Buscar</button>
+                            <button className="btn btn-primary" onClick={buscar}>Buscar</button>
                         </div>
                     </div>
                 </div>
@@ -83,7 +112,7 @@ const Usuarios = () => {
                                  <td>{item.Password}</td>
                                  <td className="d-flex gap-2">
                                     <a className="btn btn-primary" href={"/usuarios/"+ item.Id}>Editar</a>
-                                    <button className="btn btn-danger ">Eliminar</button>
+                                    <button className="btn btn-danger " onClick={()=> eliminar(item)}>Eliminar</button>
                                  </td>
                                 </tr>
                                 )
