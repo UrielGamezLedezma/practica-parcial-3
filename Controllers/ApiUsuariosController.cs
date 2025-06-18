@@ -98,15 +98,15 @@ public class ApiUsuariosController : ControllerBase
     // 1.Validar el modelo para que contenga datos
     if (string.IsNullOrWhiteSpace(model.Correo))
     {
-      return BadRequest("El correo de requerido");
+      return BadRequest("El correo es requerido");
     }
     if (string.IsNullOrWhiteSpace(model.Password))
     {
-      return BadRequest("El password de requerido");
+      return BadRequest("El password es requerido");
     }
     if (string.IsNullOrWhiteSpace(model.Nombre))
     {
-      return BadRequest("El nombre de requerido");
+      return BadRequest("El nombre es requerido");
     }
     var filter = Builders<Usuario>.Filter.Eq(x => x.Id, id);
     var item = this.collection.Find(filter).FirstOrDefault();
